@@ -1,35 +1,47 @@
 
 
-import { useState } from "react";
-export const Catalog = () => {
-  <h2>Каталог</h2>;
-};
-
-
-
 export const CatalogMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    const menu = document.getElementById("catalog-menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  };
 
   const categories = [
-    { name: "Ліжка", icon: "" },
-    { name: "Матраци", icon: "" },
-    { name: "М’які меблі", icon: "" },
-    { name: "Шафи", icon: "" },
-    { name: "Комоди", icon: "" },
-    { name: "Тумби", icon: "" },
-    { name: "Столи", icon: "" },
-    { name: "Стільці", icon: "" },
-    { name: "Меблеві стіни", icon: "" },
-    { name: "Кухні", icon: "" },
+    "Ліжка",
+    "Матраци",
+    "М’які меблі",
+    "Шафи",
+    "Комоди",
+    "Тумби",
+    "Столи",
+    "Стільці",
+    "Меблеві стіни",
+    "Кухні",
   ];
-  return(
-  <div >
+
+  return (
+    <div>
+
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleMenu}
       >
         Каталог
       </button>
+      <div
+        id="catalog-menu"
+      >
+        {categories.map((item, index) => (
+          <div
+            key={index}
+          >
+            {item}
+          </div>
+        ))}
       </div>
-  )
-      }
-       
+    </div>
+  );
+};
