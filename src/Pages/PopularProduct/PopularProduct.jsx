@@ -16,5 +16,5 @@ export const PopularProduct = () => {
         ))}
       </ul>
     </>
-  );
+  )
 };
