@@ -43,7 +43,7 @@ export const News = () => {
               <img
                 src={img.urls.small}
                 alt=""
-                style={{ height: "300px", width: "220px" }}
+                style={{ height: "300px", width: "230px" }}
               />
             </SliderItem>
           )

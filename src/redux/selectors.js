@@ -1,0 +1,1 @@
+export const getFurniture = (state => state.furniture.furniture)
