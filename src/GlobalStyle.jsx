@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -12,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #000000;
-    background-color: #FFFFFF;
+    background-color: #f8f8f8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
