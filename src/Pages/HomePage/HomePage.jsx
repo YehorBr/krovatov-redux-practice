@@ -1,11 +1,12 @@
 import { PopularProduct } from "../PopularProduct/PopularProduct";
 import { News } from "../../Components/News/News";
-import { PopularCategories } from "../../Components/PopularCategories/PopularCategories";
+import { Advantages } from "../Advantages/Andvantages";
 
 export const HomePage = () => {
   return (
     <>
       <PopularProduct />;
+      <Advantages />
       <News />
     </>
   );
