@@ -20,7 +20,7 @@ export const News = () => {
 
   const { width } = useWindowSize();
 
-  const slidesToShow = width >= 1200 ? 4 : width >= 768 ? 3 : 1;
+  const slidesToShow = width >= 1200 ? 3 : width >= 768 ? 2 : 1;
 
   const settings = {
     dots: false,
@@ -43,8 +43,9 @@ export const News = () => {
               <img
                 src={img.urls.small}
                 alt=""
-                style={{ height: "300px", width: "230px" }}
+                style={{ height: "250px", width: "250px" }}
               />
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In omnis a dignissimos?</p>
             </SliderItem>
           )
         })}

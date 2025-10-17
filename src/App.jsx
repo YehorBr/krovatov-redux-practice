@@ -17,7 +17,6 @@ export const App = () =>{
 
     return <>
         <RouterProvider router={router}/>
-        <CatalogMenu/>
         <GlobalStyle/>
 
     </>

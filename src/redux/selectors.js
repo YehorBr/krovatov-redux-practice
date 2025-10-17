@@ -1,1 +1,1 @@
-export const getFurniture = (state => state.furniture.furniture)
+export const getFurniture = (state => state.furniture.furniture) || []
