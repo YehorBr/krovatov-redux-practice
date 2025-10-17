@@ -1,31 +1,55 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import { useWindowSize } from 'react-use';
+import { Container } from "../Container/Container";
+import { SliderStl, SliderItem } from "./News.styled";
 
-const NEWS_API_KEY = '3ce63eea477043d7a470d2b21dc5ab4b'
+// const NEWS_API_KEY = "3ce63eea477043d7a470d2b21dc5ab4b";
 
-export const News = () =>{
-    const [recentNews, setRecentNews] = useState([])
+export const News = () => {
+  const [recentNews, setRecentNews] = useState([]);
 
-   useEffect(() => {
-  fetch(`https://api.unsplash.com/search/photos?query=room&per_page=10&client_id=jHh7tWbk2lZqOUp3MeHzq5lgOOWQqgjNoABwyhq4avk`)
-    .then((res) => res.json()).then((res)=> setRecentNews(res.results))
-    },[])
-    
-    console.log(recentNews);
-
-    return <>
-    <h2>Свіжі статті та останні новини</h2>
-    <ul>
-        {recentNews.map((img)=>{
-            return <li key={img.id}>
-                <img src={img.urls.small} alt="" style={{height: "200px"}}/>
-                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+  useEffect(() => {
+    fetch(
+      `https://api.unsplash.com/search/photos?query=room&per_page=15&client_id=jHh7tWbk2lZqOUp3MeHzq5lgOOWQqgjNoABwyhq4avk`
+    )
+      .then((res) => res.json())
+      .then((res) => setRecentNews(res.results));
+  }, []);
 
 
-            </li>
-        })
-            
-        }
-    </ul>
+  const { width } = useWindowSize();
 
+  const slidesToShow = width >= 1200 ? 4 : width >= 768 ? 3 : 1;
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 700,
+    slidesToShow,
+    slidesToScroll: slidesToShow,
+     arrows: true,
+  };
+
+  return (
+    <>
+    <Container>
+        <h2>Галерея</h2>
+        
+      <SliderStl {...settings}>
+        {recentNews.map((img) => {
+          return (
+            <SliderItem key={img.id}>
+              <img
+                src={img.urls.small}
+                alt=""
+                style={{ height: "300px", width: "230px" }}
+              />
+            </SliderItem>
+          )
+        })}
+        </SliderStl>
+    </Container>
     </>
-} 
+  );
+};
