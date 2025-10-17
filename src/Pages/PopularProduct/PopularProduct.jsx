@@ -1,20 +1,20 @@
+import { useSelector } from "react-redux";
 import { OneProduct } from "./OneProduct";
 
 export const PopularProduct = () => {
+  const furniture = useSelector((state) => state.furniture.items);
+  const popularFurniture = furniture.slice(0, 8);
   return (
-    <>
-      <h2>Найпопулярніші продукти</h2>
-      <ul>
-        {[
-          { name: "ліжко", price: 200 },
-          { name: "шафа", price: 300 },
-          { name: "комод", price: 150 },
-        ].map((item) => (
-          <li>
-            <OneProduct price={item.price} name={item.name} />
-          </li>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {popularFurniture.map((item) => (
+        <OneProduct
+          key={item.id}
+          name={item.name}
+          available={item.available}
+          price={item.price}
+          image={item.image}
+        />
+      ))}
+    </ul>
   );
 };
