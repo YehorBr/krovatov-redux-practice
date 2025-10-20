@@ -6,7 +6,7 @@ import { CatalogMenu } from "../Catalog/Catalog";
 
 export const HomePage = () => {
   return  <>
-            <CatalogMenu/>
+          <CatalogMenu/>
       <PopularCategories/>
       <PopularProduct />;
       <Advantages />
