@@ -1,0 +1,39 @@
+.Help{
+    color: #535353;
+}
+
+.Help-block{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 336px;
+}
+
+.Help-icon-block{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.bali{
+    height: 30px;
+}
+
+.Help-icon-wa{
+    color: #75b73b;
+    width: 30px;
+    height: 30px;
+}
+
+.Help-icon-tg{
+    color: #40b3e0;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.Help-icon-vb{
+    color: #6f3faa;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}

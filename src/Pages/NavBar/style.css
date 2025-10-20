@@ -1,0 +1,11 @@
+.navigation{
+    margin-top: 15px;
+    width: 560px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+.navigation-link{
+    color: #535353;
+}
