@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import { useWindowSize } from 'react-use';
 import { Container } from "../Container/Container";
 import { SliderStl, SliderItem } from "./News.styled";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 // const NEWS_API_KEY = "3ce63eea477043d7a470d2b21dc5ab4b";
 

@@ -17,7 +17,6 @@ export const Layout = () => {
           <NavLink to={"/catalog"}>Catalog</NavLink>
           <NavLink to={"/checkout"}>CheckOut</NavLink>
         </nav>
-        <Advantages />
         <Types />
       </header>
       <main>
