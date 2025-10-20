@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { Add } from "./AddItem";
+import { Container } from "../../Components/Container/Container";
+import { SliderItem, SliderStl } from "../../Components/News/News.styled";
+import { useWindowSize } from "react-use";
 
 export const Advantages = () => {
   const [adds, setAdds] = useState([]);
@@ -10,12 +13,31 @@ export const Advantages = () => {
       .then((data) => setAdds(data));
   }, []);
 
-  console.log(adds);
+  const { width } = useWindowSize();
+
+  const slidesToShow = width >= 1200 ? 3 : width >= 768 ? 2 : 1;
+
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 700,
+    slidesToShow,
+    slidesToScroll: slidesToShow,
+    arrows: true,
+  };
+
   return (
-    <ul>
-      {adds.map((item) => (
-        <Add key={item.id} img={item.image} />
-      ))}
-    </ul>
+    <Container>
+      <h2>Галерея</h2>
+
+      <SliderStl {...settings}>
+        <ul>
+          {" "}
+          {adds.map((item) => (
+            <SliderItem key={item.id} img={item.image}></SliderItem>
+          ))}
+        </ul>
+      </SliderStl>
+    </Container>
   );
 };
