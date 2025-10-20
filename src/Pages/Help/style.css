@@ -1,17 +1,39 @@
 .Help{
-    margin-top: 15px;
-    width: 314px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: #535353;
 }
 
+.Help-block{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 336px;
+}
+
+.Help-icon-block{
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+.bali{
+    height: 30px;
+}
+
+.Help-icon-wa{
+    color: #75b73b;
+    width: 30px;
+    height: 30px;
+}
+
 .Help-icon-tg{
-    color: lightskyblue;
+    color: #40b3e0;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
 }
 
 .Help-icon-vb{
-    color: lightskyblue;
+    color: #6f3faa;
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
 }
