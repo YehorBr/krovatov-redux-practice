@@ -1,11 +1,17 @@
-.navigation{
+.Help{
     margin-top: 15px;
-    width: 560px;
+    width: 314px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-.navigation-link{
     color: #535353;
+}
+
+.Help-icon-tg{
+    color: lightskyblue;
+}
+
+.Help-icon-vb{
+    color: lightskyblue;
 }
