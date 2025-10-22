@@ -1,3 +1,3 @@
 export const Sales = () => {
-  return;
+  return
 };
