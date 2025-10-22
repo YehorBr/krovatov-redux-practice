@@ -16,11 +16,11 @@ export const ContainerStyled = styled.div`
     padding: 0 10px;
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1319px) {
     max-width: 768px;
   }
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
+  @media screen and (min-width: 1320px) {
+    max-width: 1320px;
   }
 `;

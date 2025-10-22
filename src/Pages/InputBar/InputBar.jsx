@@ -1,8 +1,9 @@
+import { InputLine } from "./Ibar.styled.jsx"
+
 export const InputBar = () => {
   return (
     <>
-      <button>Каталог</button>
-      <input type="text" placeholder="Пошук..." />
+      <InputLine type="text" placeholder="Пошук товарiв" />
     </>
   );
 };

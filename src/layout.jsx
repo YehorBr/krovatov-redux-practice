@@ -4,23 +4,27 @@ import { Help } from "./Pages/Help/Help";
 import { InputBar } from "./Pages/InputBar/InputBar";
 import { Advantages } from "./Pages/Advantages/Andvantages";
 import { Types } from "./Pages/Types/Types";
-import './layout.css';
+import { HeaderTopline } from "./header.styled.jsx";
+import { Component } from "lucide-react";
+import { Container } from './Components/Container/Container.jsx'
 
 export const Layout = () => {
   return (
     <>
       <header>
-        <div className="header-topline">
-        <NavBar />
-        <Help />
-        </div>
-        <InputBar />
-        <nav>
-          <NavLink to={"/"}>Home</NavLink>
-          <NavLink to={"/catalog"}>Catalog</NavLink>
-          <NavLink to={"/checkout"}>CheckOut</NavLink>
-        </nav>
-        <Types />
+        <Container>
+          <HeaderTopline>
+            <NavBar />
+            <Help />
+          </HeaderTopline>
+          <nav>
+            <NavLink to={"/"}>Home</NavLink>
+            <NavLink to={"/catalog"}>Catalog</NavLink>
+            <InputBar />
+            <NavLink to={"/checkout"}>CheckOut</NavLink>
+          </nav>
+          <Types />
+        </Container>
       </header>
       <main>
         <Outlet />
