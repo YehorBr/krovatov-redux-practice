@@ -4,6 +4,7 @@ import { Advantages } from "../Advantages/Andvantages";
 import { PopularCategories } from "../../Components/PopularCategories/PopularCategories";
 import { CatalogMenu } from "../Catalog/Catalog";
 import KrovatoInfo from "../../Components/KrovatoInfo/KrovatoInfo";
+import Footer from "../../Components/Footer/Footer";
 
 
 export const HomePage = () => {
@@ -14,5 +15,7 @@ export const HomePage = () => {
       <Advantages />
       <News />
        <KrovatoInfo /> 
+         <Footer/>
     </>
+  
 };
