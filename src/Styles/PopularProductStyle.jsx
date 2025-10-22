@@ -3,8 +3,12 @@ import styled from "styled-components";
 export const ProductList = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center ;
   gap: 30px;
-  margin-left: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
 `;
 
 export const ProductImg = styled.img`
@@ -20,8 +24,8 @@ export const ProductItem = styled.li`
   align-items: center;
   border: 1px solid #e3e2e2;
   border-radius: 8px;
-  width: 300px;
-  height: 468px;
+  width: 260px;
+  padding: 10px 0;
 
   background-color: #fff;
 `;

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { Add } from "./AddItem";
 import { Container } from "../../Components/Container/Container";
 import { SliderItem, SliderStl } from "../../Components/News/News.styled";
 import { useWindowSize } from "react-use";
+import Slider from "react-slick";
+import {Add} from "./AddItem"
 
 export const Advantages = () => {
   const [adds, setAdds] = useState([]);
@@ -28,16 +29,11 @@ export const Advantages = () => {
 
   return (
     <Container>
-      <h2>Галерея</h2>
-
       <SliderStl {...settings}>
-        <ul>
-          {" "}
           {adds.map((item) => (
-            <SliderItem key={item.id} img={item.image}></SliderItem>
+            <Add key={item.id} img={item.image}></Add>
           ))}
-        </ul>
       </SliderStl>
     </Container>
-  );
+  )
 };

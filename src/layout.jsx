@@ -5,11 +5,13 @@ import { InputBar } from "./Pages/InputBar/InputBar";
 import { Advantages } from "./Pages/Advantages/Andvantages";
 import { Types } from "./Pages/Types/Types";
 import './layout.css';
+import { Container } from "./Components/Container/Container";
 
 export const Layout = () => {
   return (
     <>
       <header>
+        <Container>
         <div className="header-topline">
         <NavBar />
         <Help />
@@ -21,11 +23,17 @@ export const Layout = () => {
           <NavLink to={"/checkout"}>CheckOut</NavLink>
         </nav>
         <Types />
+        </Container>
       </header>
       <main>
+        <Container>
         <Outlet />
+        </Container>
       </main>
-      <footer></footer>
+      <footer>
+        <Container>
+        </Container>
+      </footer>
     </>
   );
 };

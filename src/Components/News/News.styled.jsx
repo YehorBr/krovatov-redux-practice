@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import styled from "styled-components";
 
+
 export const SliderStl = styled(Slider)`
   margin-left: auto;
   margin-right: auto;
@@ -28,6 +29,9 @@ export const SliderStl = styled(Slider)`
 export const SliderItem = styled.div`
   position: relative;
   box-sizing: border-box;
+  background-color: #fff;
+
   max-width: 250px;
-  border-radius: 10px;
+  border-radius: 15px;
+  padding-bottom: 10px;
 `;
