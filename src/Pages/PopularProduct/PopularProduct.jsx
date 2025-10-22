@@ -6,7 +6,8 @@ import { ProductList } from "../../Styles/PopularProductStyle";
 export const PopularProduct = () => {
   const furniture = useSelector(getFurniture);
   const popularFurniture = furniture.slice(0, 8);
-  return (
+  return <>
+    <h2 style={{marginBottom: "15px"}}>Найпопулярніші товари</h2>
     <ProductList>
       {popularFurniture.map((item) => (
         <OneProduct
@@ -18,5 +19,5 @@ export const PopularProduct = () => {
         />
       ))}
     </ProductList>
-  );
+  </>
 };
